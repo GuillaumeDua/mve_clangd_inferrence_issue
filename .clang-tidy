@@ -1,0 +1,34 @@
+# Under MIT License
+# Copyright (c) 2021 Guillaume Dua "Guss"
+# Source: https://github.com/GuillaumeDua/CppShelf/blob/main/.clang-tidy
+# ---
+
+Checks: >
+    -boost-*,
+    cert-*,
+    cppcoreguidelines-*,
+    clang-analyzer-*,
+    google-*,
+        -google-build-using-namespace,
+        -google-readability-namespace-comments,
+        -google-readability-braces-around-statements,
+    llvm-*,
+        -llvm-header-guard,
+        -llvm-include-order,
+        -llvm-namespace-comment,
+    misc-*,
+    modernize-*,
+        -modernize-use-trailing-return-type,
+        -modernize-avoid-c-arrays
+    mpi-*,
+    performance-*,
+    readability-*,
+        -readability-braces-around-statements,
+        -readability-named-parameter,
+        -readability-identifier-length,
+        -readability-magic-numbers,
+        -readability-uppercase-literal-suffix
+    misc-header-include-cycle
+
+# WarningsAsErrors: '*'
+HeaderFilterRegex: '.*hpp$'

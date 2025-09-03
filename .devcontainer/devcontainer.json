@@ -1,0 +1,15 @@
+{
+  "name": "Clang 21 Dev",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "features": {},
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "llvm-vs-code-extensions.vscode-clangd",
+    "ms-vscode.cmake-tools",
+    "twxs.cmake"
+  ]
+}

@@ -1,0 +1,20 @@
+CompileFlags:
+    Add: [ -std=c++23, -ferror-limit=0 ]
+    CompilationDatabase: "build"
+    Compiler: "clang++"
+    BuiltinHeaders: QueryDriver
+
+Index:
+    Background: Skip
+    StandardLibrary: Yes
+
+InlayHints:
+    Enabled: Yes
+    ParameterNames: Yes
+    DeducedTypes: Yes
+
+Diagnostics:
+    UnusedIncludes: Strict
+
+Completion:
+    AllScopes: false

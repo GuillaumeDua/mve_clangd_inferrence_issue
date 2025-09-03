@@ -1,0 +1,73 @@
+{
+    "[cmake]": {
+        "editor.defaultFormatter": "ms-vscode.cmake-tools",
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.tabCompletion": "on"
+    },
+    "[cpp][c][cuda-cpp][objective-c][objective-cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.tabCompletion": "on",
+        "editor.tabSize": 4
+    },
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.clang_format_style": "${workspaceFolder}/.clang-format",
+    "C_Cpp.codeAnalysis.clangTidy.path": "/usr/bin/clang-tidy",
+    "C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--enable-config",
+        "-log=verbose",
+        "-pretty",
+        "--background-index",
+        "-compile-commands-dir=${workspaceFolder}/build",
+        "--header-insertion=never",
+        "--completion-style=detailed"
+    ],
+    "clangd.checkUpdates": true,
+    "clangd.onConfigChanged": "restart",
+    "clangd.path": "/usr/bin/clangd-21",
+    "clangd.restartAfterCrash": true,
+    "cmake.buildBeforeRun": false,
+    "cmake.buildDirectory": "${workspaceRoot}/build",
+    "cmake.configureArgs": [
+        "-Wno-dev",
+        "--warn-uninitialized",
+        "--warn-unused-vars",
+        "--no-warn-unused-cli",
+        "--check-system-vars"
+    ],
+    "cmake.configureOnOpen": false,
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+        "CMAKE_GENERATOR": "Ninja",
+    },
+    // "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "cmake.ctest.allowParallelJobs": true, // best emulate the CI behavior
+    "cmake.ctestArgs": [
+        "--label-exclude",
+        "manual"
+    ],
+    "cmake.installPrefix": "${workspaceRoot}/install/${buildType}",
+    "cmake.options.statusBarVisibility": "compact",
+    "cmake.revealLog": "error",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "debug.openDebug": "openOnDebugBreak",
+    "editor.detectIndentation": false,
+    "editor.indentSize": "tabSize",
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 4, // requires for indentation helpers
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp"
+    },
+    "workbench.panel.opensMaximized": "never"
+}
